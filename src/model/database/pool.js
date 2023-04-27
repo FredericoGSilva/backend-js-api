@@ -1,4 +1,7 @@
 import mysql from "mysql2"
+import dotenv from "dotenv"
+
+dotenv.config()
 
 const pool = mysql.createPool({
     host: "127.0.0.1",
@@ -9,3 +12,5 @@ const pool = mysql.createPool({
     connectionLimit: 10,
     queueLimit: 2
 })
+
+export default pool

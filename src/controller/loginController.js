@@ -10,6 +10,16 @@ const loginController = {
                 res.status(404).json({mensagem: "Erro"})
             }
         })
+    },
+
+    listLoginById: (req, res) => {
+        loginModel.listLoginById((error, results) => {
+            if (!error) {
+                res.status(200).json(results)
+            } else {
+                res.status(404).json({mensagem: "Erro"})
+            }
+        })
     }
 }
 

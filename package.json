@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "uglify": "uglifyjs src/routes/loginRoutes.js src/app.js src/server.js -c -m -o dist/bundle.min.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,8 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mysql2": "^3.2.4"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.17.4"
   }
 }

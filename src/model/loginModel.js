@@ -1,4 +1,4 @@
-import pool from "./database/pool"
+import pool from "./database/pool.js"
 
 const loginModel = {
     listLogin: (callback) => {

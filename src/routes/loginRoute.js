@@ -1,8 +1,10 @@
 import express from "express"
 import loginController from "../controller/loginController.js"
 
-const router = express.Router()
+const route = express.Router()
 
-router.get("/listLogin", loginController.listLogin)
+route.get("/list", loginController.listLogin)
+route.get("/list/:id", loginController.listLoginById)
+route.get("/login", loginController.login)
 
-export default router
+export default route
